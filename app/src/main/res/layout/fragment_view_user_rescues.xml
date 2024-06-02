@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginBottom="@dimen/bbn_bottom_navigation_height">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/user_rescues_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.MaterialComponents.Bridge"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabIndicatorColor="@color/colorNewUxBlue"
+            app:tabIndicatorHeight="2dp"
+            android:background="@color/colorWhite"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="@color/colorNewUxLightGray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_user_rescues"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@+id/user_rescues_tab"
+            android:layout_marginTop="@dimen/std_10_dp" />
+
+        <TextView
+            android:id="@+id/no_rescues_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Complaints / Issues Available"
+            android:textColor="@color/colorError"
+            android:textSize="@dimen/std_16_sp"
+            android:layout_marginTop="@dimen/std_300_dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

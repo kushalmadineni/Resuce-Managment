@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.roledetails.rescueTeamOfficer.viewUserRescueDetails.ViewUserRescueDetailsByOfficer">
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_marginBottom="@dimen/bbn_bottom_navigation_height">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/city_rescues_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City Rescues"
+            android:textColor="@color/colorAccepted"
+            android:textSize="@dimen/std_20_sp"
+            android:layout_marginTop="@dimen/std_10_dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_user_rescues_by_officer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="true"
+            android:layout_below="@+id/city_rescues_header"
+            android:layout_marginTop="@dimen/std_10_dp" />
+
+        <TextView
+            android:id="@+id/no_rescues_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Rescue Requests Available"
+            android:textColor="@color/colorError"
+            android:textSize="@dimen/std_16_sp"
+            android:layout_marginTop="@dimen/std_300_dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

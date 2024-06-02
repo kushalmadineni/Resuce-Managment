@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <ScrollView
+        android:id="@+id/admin_settings_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="false"
+        android:layout_marginBottom="@dimen/bbn_bottom_navigation_height"
+        android:scrollbarStyle="insideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_10_dp"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_admin_setting_option"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

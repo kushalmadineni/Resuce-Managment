@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_profile_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bbn_bottom_navigation_height"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:id="@+id/user_profile_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_20_dp"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding">
+
+            <RelativeLayout
+                android:id="@+id/image_user_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="@dimen/std_100_dp"
+                    android:layout_height="@dimen/std_100_dp"
+                    android:contentDescription="User image"
+                    android:src="@drawable/ic_person_profile"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="1dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_personal_info"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_user_layout"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                android:text="Personal Info"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_mobile_number_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_personal_info"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Mobile Number (Not Editable)"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_mobile_number_value"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_mobile_number_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:gravity="start|center"
+                android:hint="Mobile Number"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <TextView
+                android:id="@+id/text_user_name_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_mobile_number_value"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Full Name"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_user_name"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_user_name_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:gravity="start|center"
+                android:hint="Enter full Name"
+                android:paddingStart="@dimen/std_10_dp"
+                android:inputType="textPersonName|textCapWords"
+                android:nextFocusDown="@+id/edit_last_name"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <TextView
+                android:id="@+id/text_gender_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_user_name"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Gender"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_gender"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_gender_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:gravity="start|center"
+                android:hint="Select gender"
+                android:paddingStart="@dimen/std_10_dp"
+                android:nextFocusDown="@+id/btn_update"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_gender"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_all_radius_rounded_deep_corner"
+                android:gravity="center"
+                android:text="Update"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/std_18_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

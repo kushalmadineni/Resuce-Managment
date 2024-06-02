@@ -1,0 +1,175 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+    <style name="Theme.RescueConnect" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryLight</item>
+        <item name="colorOnPrimary">@color/colorPrimaryDark</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.RescueConnect.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RescueConnect.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RescueConnect.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RescueConnect.AppTextInputAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_size</item>
+    </style>
+
+    <style name="Theme.RescueConnect.AppTextInput">
+        <item name="android:labelTextSize">12sp</item>
+        <item name="android:textColorHint">@color/colorBlack</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TILEditTextTheme">
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_size</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TILEditTextTheme1">
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">@color/colorBlack</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_size</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TILEditText">
+        <item name="android:theme">@style/Theme.RescueConnect.TILEditTextTheme</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TILEditText1">
+        <item name="android:theme">@style/Theme.RescueConnect.TILEditTextTheme1</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <style name="Theme.RescueConnect.Header">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">@dimen/text_input_edit_text_size</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Theme.RescueConnect.Input">
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:padding">@dimen/medium_padding</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/input</item>
+    </style>
+
+    <style name="Theme.RescueConnect.Input.Spinner">
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:textSize">@dimen/input</item>
+        <item name="android:textColorHint">@color/colorLightGrey</item>
+    </style>
+
+    <style name="Theme.RescueConnect.Spinner" parent="@android:style/TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:itemTextAppearance">@color/colorWhite</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:dropDownSelector">@drawable/ic_expand_more</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/Theme.RescueConnect.TabLayout.TextAppearance</item>
+    </style>
+
+    <style name="Theme.RescueConnect.TabLayout.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation.Window</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogAnimation.Window" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="RatingBar1" parent="android:style/Widget.Material.RatingBar.Small">
+        <item name="colorControlNormal">@color/colorBorder</item>
+        <item name="android:colorControlHighlight">@color/colorYellowGolden</item>
+        <item name="colorControlActivated">@color/colorYellowGolden</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorMoreDarkGrayBorder</item>
+        <item name="colorControlActivated">@color/colorYellowGolden</item>
+    </style>
+
+
+    <style name="RatingBarLatest" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorYellowGoldenLight</item>
+        <item name="colorControlActivated">@color/colorYellowGolden</item>
+    </style>
+
+    <style name="ProgressDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="innerSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#F47A2E</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#C6CBDC</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#C6CBDC</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="Divider.Horizontal" parent="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+
+    // Tab layout in Daily Tasks
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/std_16_dp</item>
+    </style>
+</resources>

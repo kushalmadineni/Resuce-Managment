@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_signup_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.roledetails.resqueAdmin.rescueTypedetails.CreateAgencyFragment">
+
+    <ScrollView
+        android:id="@+id/create_agency_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding">
+
+            <TextView
+                android:id="@+id/text_login_info"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/std_10_sp"
+                android:text="Agency Officer Info"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_mobile_number_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_login_info"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Mobile Number"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_mobile_phone"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_mobile_number_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:gravity="start|center"
+                android:hint="@string/enter_mobile_number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:nextFocusDown="@+id/edit_dob"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <TextView
+                android:id="@+id/text_mPin_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_mobile_phone"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/m_pin_4_digit_number"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_mpin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_mPin_header"
+                android:layout_marginTop="@dimen/std_16_dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/password_visibility_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNewUxLightGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_mPin"
+                    style="@style/Theme.RescueConnect.TILEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/std_40_dp"
+                    android:layout_marginStart="@dimen/std_10_dp"
+                    android:layout_marginEnd="@dimen/medium_margin"
+                    android:background="@drawable/text_border"
+                    android:digits="0123456789"
+                    android:gravity="start|center"
+                    android:hint="@string/enter_mpin_4_digit_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:paddingStart="@dimen/std_10_dp"
+                    android:paddingEnd="@dimen/std_10_dp"
+                    android:paddingRight="@dimen/std_10_dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/std_16_sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_city_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_mpin_layout"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/select_city_header"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_city"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_city_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:gravity="start|center"
+                android:hint="@string/select_city"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_agency_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_city"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Select Agency"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_agency"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_agency_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:gravity="start|center"
+                android:hint="Select Agency"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/text_personal_info"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_agency"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                android:text="Agency Officer Personal Info"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_user_full_name_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_personal_info"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Agency Officer Name"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_user_full_name"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_user_full_name_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:gravity="start|center"
+                android:hint="Enter officer name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName|textCapWords"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <TextView
+                android:id="@+id/text_gender_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_user_full_name"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="@string/gender"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_gender"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_gender_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:gravity="start|center"
+                android:hint="@string/select_gender_text"
+                android:nextFocusDown="@+id/btn_signup"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <Button
+                android:id="@+id/btn_create_agency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_gender"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_all_radius_rounded_deep_corner"
+                android:gravity="center"
+                android:text="Create Agency"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/std_18_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

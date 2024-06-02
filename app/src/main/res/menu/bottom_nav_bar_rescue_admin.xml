@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    app:bbn_badgeColor="#FFFF0000"
+    app:bbn_rippleColor="#33ffffff">
+    <item
+        android:id="@+id/item_first"
+        android:color="@color/colorPrimary"
+        android:icon="@drawable/ic_dashboard"
+        android:iconTint="@color/colorWhite"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/item_second"
+        android:color="@color/colorPrimary"
+        android:icon="@drawable/ic_persons"
+        android:iconTint="@color/colorWhite"
+        android:title="Create Agency" />
+    <item
+        android:id="@+id/item_third"
+        android:color="@color/colorPrimary"
+        android:icon="@drawable/ic_add_new_city"
+        android:iconTint="@color/colorWhite"
+        android:title="Add Rescue Type" />
+    <item
+        android:id="@+id/item_fourth"
+        android:color="@color/colorPrimary"
+        android:icon="@drawable/ic_settings"
+        android:iconTint="@color/colorWhite"
+        android:title="Settings" />
+</menu>

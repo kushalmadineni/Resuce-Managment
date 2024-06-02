@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/update_mpin_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/bbn_bottom_navigation_height"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:id="@+id/update_mpin_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/std_20_dp"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding">
+
+            <RelativeLayout
+                android:id="@+id/image_user_pic_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="@dimen/std_100_dp"
+                    android:layout_height="@dimen/std_100_dp"
+                    android:contentDescription="User image"
+                    android:src="@drawable/ic_person_profile"
+                    app:civ_border_color="@color/colorNewUxBlue"
+                    app:civ_border_width="1dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_person_name"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_user_pic_layout"
+                android:layout_marginTop="@dimen/extra_large_margin"
+                android:gravity="center"
+                android:hint="Person Name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_mobile_number_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_person_name"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Mobile Number (Not Editable)"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_mobile_number_value"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:gravity="start|center"
+                android:layout_below="@+id/text_mobile_number_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:hint="Mobile Number"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/text_old_mpin_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_mobile_number_value"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Old mPin (4 Digit Number)"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_old_mpin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_old_mpin_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/password_visibility_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNewUxLightGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_old_mPin"
+                    style="@style/Theme.RescueConnect.TILEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/std_40_dp"
+                    android:background="@drawable/text_border"
+                    android:digits="0123456789"
+                    android:gravity="start|center"
+                    android:hint="Enter old mPin"
+                    android:inputType="numberPassword"
+                    android:paddingStart="@dimen/std_10_dp"
+                    android:paddingEnd="@dimen/std_10_dp"
+                    android:paddingRight="@dimen/std_10_dp"
+                    android:textColor="@color/colorBlack" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_new_mpin_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_old_mpin_layout"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="New mPin (4 Digit Number)"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_new_mPin_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_new_mpin_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@drawable/password_visibility_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorNewUxLightGray">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_new_mPin"
+                    style="@style/Theme.RescueConnect.TILEditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/std_40_dp"
+                    android:background="@drawable/text_border"
+                    android:digits="0123456789"
+                    android:gravity="start|center"
+                    android:hint="Enter new mPin"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:paddingStart="@dimen/std_10_dp"
+                    android:paddingEnd="@dimen/std_10_dp"
+                    android:paddingRight="@dimen/std_10_dp"
+                    android:textColor="@color/colorBlack" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_new_mPin_layout"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_all_radius_rounded_deep_corner"
+                android:gravity="center"
+                android:text="Update"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/std_18_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

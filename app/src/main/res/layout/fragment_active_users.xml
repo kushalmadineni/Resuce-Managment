@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.roledetails.admin.ActiveUsersFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/std_10_dp"
+            android:paddingLeft="@dimen/std_10_dp"
+            android:paddingEnd="@dimen/std_10_dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/bbn_bottom_navigation_height"
+            android:paddingRight="@dimen/std_10_dp"
+            android:paddingBottom="@dimen/std_10_dp">
+
+            <TextView
+                android:id="@+id/text_swipe_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/std_10_dp"
+                android:gravity="center_horizontal"
+                android:text="Swipe down to refresh user details"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_swipe_header"
+                android:layout_marginStart="@dimen/std_6_dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="@dimen/std_6_dp"
+                android:layout_marginBottom="@dimen/medium_margin">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_active_user_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/text_swipe_header"
+                    android:visibility="visible" />
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/no_users_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Users Available"
+            android:textColor="@color/colorError"
+            android:textSize="@dimen/std_16_sp"
+            android:layout_marginTop="@dimen/std_300_dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_below="@+id/swipeContainer"
+            android:textStyle="bold" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

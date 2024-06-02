@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="@dimen/std_10_dp"
+    android:layout_marginLeft="@dimen/std_10_dp"
+    android:layout_marginRight="@dimen/std_10_dp"
+    android:layout_marginEnd="@dimen/std_10_dp"
+    android:layout_marginTop="@dimen/std_16_sp"
+    android:layout_marginBottom="@dimen/std_16_sp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/places_item_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:elevation="12dp"
+        android:innerRadius="40dp"
+        android:shape="rectangle"
+        android:thicknessRatio="4"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_main_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_header_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/std_6_dp"
+                    android:text="Rescues"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_main_title">
+
+                <ImageView
+                    android:id="@+id/item_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/std_180_dp"
+                    android:background="@color/colorBlack"
+                    android:contentDescription="places icon" />
+
+                <TextView
+                    android:id="@+id/item_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="end|top"
+                    android:drawableEnd="@drawable/ic_person_full"
+                    android:drawableRight="@drawable/ic_person_full"
+                    android:drawablePadding="@dimen/std_6_dp"
+                    android:drawableTint="@color/colorSuccess"
+                    android:gravity="end|top"
+                    android:hint="User Name"
+                    android:paddingTop="@dimen/std_6_dp"
+                    android:paddingBottom="@dimen/std_6_dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/desc_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_layout"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorBlack"
+                    android:drawableLeft="@drawable/ic_public_lock"
+                    android:drawableTint="@color/colorSuccess"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingStart="@dimen/std_4_dp"
+                    android:paddingLeft="@dimen/std_4_dp"
+                    android:paddingTop="@dimen/std_6_dp"
+                    android:paddingEnd="@dimen/std_4_dp"
+                    android:paddingRight="@dimen/std_4_dp"
+                    android:paddingBottom="@dimen/std_6_dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/item_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorBlack"
+                    android:drawableLeft="@drawable/ic_view_complaint_or_issues"
+                    android:drawablePadding="@dimen/std_10_dp"
+                    android:drawableTint="@color/colorSuccess"
+                    android:gravity="start|center_horizontal"
+                    android:paddingStart="@dimen/std_4_dp"
+                    android:paddingLeft="@dimen/std_4_dp"
+                    android:paddingTop="@dimen/std_6_dp"
+                    android:paddingEnd="@dimen/std_4_dp"
+                    android:paddingRight="@dimen/std_4_dp"
+                    android:paddingBottom="@dimen/std_6_dp"
+                    android:text="Description"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/item_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorBlack"
+                    android:drawableLeft="@drawable/ic_add_new_city"
+                    android:drawablePadding="@dimen/std_10_dp"
+                    android:drawableTint="@color/colorSuccess"
+                    android:gravity="start|center_horizontal"
+                    android:paddingStart="@dimen/std_4_dp"
+                    android:paddingLeft="@dimen/std_4_dp"
+                    android:paddingTop="@dimen/std_6_dp"
+                    android:paddingEnd="@dimen/std_4_dp"
+                    android:paddingRight="@dimen/std_4_dp"
+                    android:paddingBottom="@dimen/std_10_dp"
+                    android:text="Address"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

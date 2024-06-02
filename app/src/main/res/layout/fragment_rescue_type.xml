@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_rescue_type_coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.roledetails.resqueAdmin.RescueAdminMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/bbn_bottom_navigation_height">
+
+        <RelativeLayout
+            android:id="@+id/sub_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding">
+
+            <TextView
+                android:id="@+id/text_add_rescue_type"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/std_10_sp"
+                android:text="Add New Rescue Type Here"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_add_new_rescue_type"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_add_rescue_type"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:gravity="start|center"
+                android:hint="Enter rescue type name"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/edit_dob"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/std_16_sp" />
+
+            <Button
+                android:id="@+id/btn_add_rescue_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_add_new_rescue_type"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/button_all_radius_rounded_deep_corner"
+                android:gravity="center"
+                android:text="Add Rescue Type"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/std_18_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_added_rescue_type_title"
+            style="@style/Theme.RescueConnect.Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sub_layout"
+            android:layout_marginTop="@dimen/std_20_sp"
+            android:paddingStart="@dimen/relative_horizontal_padding"
+            android:paddingLeft="@dimen/relative_horizontal_padding"
+            android:paddingEnd="@dimen/relative_horizontal_padding"
+            android:paddingRight="@dimen/relative_horizontal_padding"
+            android:paddingBottom="@dimen/relative_vertical_padding"
+            android:text="Added Rescue Type List"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/rescue_type_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/text_added_rescue_type_title"
+            android:layout_marginTop="@dimen/std_2_dp" />
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

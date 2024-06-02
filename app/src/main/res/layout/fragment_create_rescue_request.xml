@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/create_rescue_coordinate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <ScrollView
+        android:id="@+id/create_rescue_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/bbn_bottom_navigation_height"
+        android:fillViewport="false"
+        android:scrollbarStyle="insideOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_city_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Your City"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_city"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="start|center"
+                android:textSize="@dimen/std_16_sp"
+                android:paddingStart="@dimen/std_10_dp"
+                android:layout_below="@+id/text_city_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:background="@drawable/text_border"
+                android:hint="your City"
+                android:nextFocusDown="@+id/btn_signup"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/text_rescue_type_main"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_city"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Select Rescue Type"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_rescue_type"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_rescue_type_main"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:gravity="start|center"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textSize="@dimen/std_16_sp"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:hint="Select Rescue Type"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_rescue_agencies_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rescue_type"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Select Rescue Agencies"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_rescue_agencies"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_rescue_agencies_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:gravity="start|center"
+                android:paddingStart="@dimen/std_10_dp"
+                android:textSize="@dimen/std_16_sp"
+                android:background="@drawable/text_border"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:hint="Select Rescue Agencies"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null"
+                android:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/text_rescue_access_type_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rescue_agencies"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Select Rescue Access Type"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <RadioGroup
+                android:id="@+id/radio_rescue_access_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rescue_access_type_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <RadioButton
+                    android:id="@+id/radio_rescue_access_private"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="true"
+                    android:text="Private" />
+
+                <RadioButton
+                    android:id="@+id/radio_rescue_access_public"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Public" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/text_rescue_main_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio_rescue_access_type"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Rescue Title"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_rescue"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/std_40_dp"
+                android:layout_below="@+id/text_rescue_main_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:gravity="start|center"
+                android:textSize="@dimen/std_16_sp"
+                android:paddingStart="@dimen/std_10_dp"
+                android:background="@drawable/text_border"
+                android:hint="Enter Rescue title"
+                android:inputType="textCapSentences"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/text_rescue_desc_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_rescue"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Rescue description"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_rescue_desc"
+                style="@style/Theme.RescueConnect.Input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rescue_desc_header"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/medium_margin"
+                android:textSize="@dimen/std_16_sp"
+                android:paddingStart="@dimen/std_10_dp"
+                android:background="@drawable/text_border"
+                android:gravity="start"
+                android:hint="Enter rescue description here"
+                android:inputType="textCapSentences|textMultiLine"
+                android:lines="20"
+                android:minLines="5"
+                android:nextFocusDown="@+id/edit_last_name"
+                android:textColor="@color/colorBlack"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/text_select_location_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_rescue_desc"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/std_20_dp"
+                android:drawableStart="@drawable/ic_add_new_city"
+                android:drawablePadding="@dimen/std_10_dp"
+                android:drawableTint="@color/colorPrimaryDark"
+                android:text="Select Location (Click Here)"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_location"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_select_location_header"
+                android:layout_marginStart="@dimen/std_20_dp"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/std_10_dp"
+                android:drawableStart="@drawable/ic_photo_selection"
+                android:drawablePadding="@dimen/std_10_dp"
+                android:hint="Selected Location"
+                android:textColor="@color/colorSecondaryText" />
+
+            <TextView
+                android:id="@+id/text_location_latlong"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_location"
+                android:layout_marginStart="@dimen/std_20_dp"
+                android:layout_marginTop="@dimen/large_margin"
+                android:layout_marginEnd="@dimen/std_10_dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/std_10_dp"
+                android:hint="Location Latitude and Logitude"
+                android:textColor="@color/colorSecondaryText" />
+
+            <TextView
+                android:id="@+id/text_capture_picture_header"
+                style="@style/Theme.RescueConnect.Header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_location_latlong"
+                android:layout_marginStart="@dimen/medium_margin"
+                android:layout_marginTop="@dimen/large_margin"
+                android:text="Capture Picture"
+                android:textColor="@color/colorSecondaryText"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/image_rescue_layout"
+                android:layout_width="@dimen/std_360_dp"
+                android:layout_height="@dimen/std_200_dp"
+                android:layout_below="@+id/text_capture_picture_header"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/std_10_dp"
+                android:background="@color/transparent">
+
+                <ImageView
+                    android:id="@+id/place_image"
+                    android:layout_width="@dimen/std_360_dp"
+                    android:layout_height="@dimen/std_200_dp"
+                    android:contentDescription=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/image_camera_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignEnd="@id/place_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="160dp"
+                    android:background="@drawable/icon_background_dark_gray"
+                    android:contentDescription="Camera Icon"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_camera"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.85"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_rescue_layout"
+                android:layout_marginStart="@dimen/std_30_dp"
+                android:layout_marginTop="@dimen/std_30_dp"
+                android:layout_marginEnd="@dimen/std_30_dp"
+                android:layout_marginBottom="@dimen/std_30_dp"
+                android:background="@drawable/button_all_radius_rounded_deep_corner"
+                android:gravity="center"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/std_18_sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

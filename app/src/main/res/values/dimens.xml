@@ -1,0 +1,107 @@
+<resources>
+<!-- Default screen margins, per the Android Design guidelines. -->
+<dimen name="activity_horizontal_margin">16dp</dimen>
+<dimen name="activity_vertical_margin">16dp</dimen>
+<dimen name="nav_header_vertical_spacing">8dp</dimen>
+<dimen name="nav_header_height">176dp</dimen>
+<dimen name="fab_margin">16dp</dimen>
+
+<!-- Standard DP Dimension Values -->
+<dimen name="std_20_dp">20dp</dimen>
+<dimen name="std_18_dp">18dp</dimen>
+<dimen name="std_16_dp">16dp</dimen>
+<dimen name="std_14_dp">14dp</dimen>
+<dimen name="std_12_dp">12dp</dimen>
+<dimen name="std_10_dp">10dp</dimen>
+<dimen name="std_8_dp">8dp</dimen>
+<dimen name="std_6_dp">6dp</dimen>
+<dimen name="std_4_dp">4dp</dimen>
+<dimen name="std_2_dp">2dp</dimen>
+
+<!-- Standard SP Dimension Values -->
+<dimen name="std_30_sp">30sp</dimen>
+<dimen name="std_28_sp">28sp</dimen>
+<dimen name="std_26_sp">26sp</dimen>
+<dimen name="std_24_sp">24sp</dimen>
+<dimen name="std_22_sp">22sp</dimen>
+<dimen name="std_20_sp">20sp</dimen>
+<dimen name="std_18_sp">18sp</dimen>
+<dimen name="std_16_sp">16sp</dimen>
+<dimen name="std_14_sp">14sp</dimen>
+<dimen name="std_12_sp">12sp</dimen>
+<dimen name="std_10_sp">10sp</dimen>
+<dimen name="std_8_sp">8sp</dimen>
+<dimen name="std_6_sp">6sp</dimen>
+<dimen name="std_4_sp">4sp</dimen>
+<dimen name="std_2_sp">2sp</dimen>
+
+<!-- Custom DP Dimension Values -->
+<dimen name="std_360_dp">360dp</dimen>
+<dimen name="std_300_dp">300dp</dimen>
+<dimen name="std_280_dp">280dp</dimen>
+<dimen name="std_260_dp">260dp</dimen>
+<dimen name="std_240_dp">240dp</dimen>
+<dimen name="std_220_dp">220dp</dimen>
+<dimen name="std_200_dp">200dp</dimen>
+<dimen name="std_180_dp">180dp</dimen>
+<dimen name="std_160_dp">160dp</dimen>
+<dimen name="std_140_dp">140dp</dimen>
+<dimen name="std_120_dp">120dp</dimen>
+<dimen name="std_100_dp">100dp</dimen>
+<dimen name="std_80_dp">80dp</dimen>
+<dimen name="std_70_dp">70dp</dimen>
+<dimen name="std_66_dp">66dp</dimen>
+<dimen name="std_64_dp">64dp</dimen>
+<dimen name="std_60_dp">60dp</dimen>
+<dimen name="std_50_dp">50dp</dimen>
+<dimen name="std_40_dp">40dp</dimen>
+<dimen name="std_38_dp">38dp</dimen>
+<dimen name="std_36_dp">36dp</dimen>
+<dimen name="std_34_dp">34dp</dimen>
+<dimen name="std_32_dp">32dp</dimen>
+<dimen name="std_30_dp">30dp</dimen>
+<dimen name="std_28_dp">28dp</dimen>
+<dimen name="std_26_dp">26dp</dimen>
+<dimen name="std_24_dp">24dp</dimen>
+<dimen name="std_22_dp">22dp</dimen>
+
+<dimen name="std_58_dp">58dp</dimen>
+<dimen name="std_56_dp">56dp</dimen>
+
+
+<dimen name="material_button_corner_radius">4dp</dimen>
+<dimen name="material_button_stroke_borderless">0dp</dimen>
+<dimen name="material_button_stroke_bordered">1dp</dimen>
+<dimen name="material_button_text_size">12sp</dimen>
+
+<dimen name="relative_horizontal_padding">16dp</dimen>
+<dimen name="relative_vertical_padding">16dp</dimen>
+<dimen name="relative_paddingEnd">16dp</dimen>
+<dimen name="relative_paddingStart">16dp</dimen>
+
+<dimen name="small_margin">5dp</dimen>
+<dimen name="medium_margin">10dp</dimen>
+<dimen name="large_margin">15dp</dimen>
+<dimen name="extra_large_margin">15dp</dimen>
+<dimen name="huge_margin">20dp</dimen>
+
+<dimen name="small_padding">5dp</dimen>
+<dimen name="medium_padding">8dp</dimen>
+<dimen name="text_margin">16dp</dimen>
+<dimen name="dialog_padding">24dp</dimen>
+<dimen name="dialog_button_padding">8dp</dimen>
+<dimen name="dimens_large">16sp</dimen>
+
+<dimen name="alertdialog_button_width">30dp</dimen>
+<dimen name="alertdialog_button_height">40dp</dimen>
+<dimen name="view_pager_height">300dp</dimen>
+<dimen name="driver_name_text_size">22sp</dimen>
+<dimen name="left_heading_text_size">16sp</dimen>
+<dimen name="dig_id_address_text_size">12sp</dimen>
+
+<dimen name="activity_horizontal_padding">10dp</dimen>
+
+<dimen name="text_input_edit_text_size">16sp</dimen>
+
+<dimen name="input">14sp</dimen>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#159CD7</color>
+    <!--    <color name="colorPrimaryLight">#8d5798c1</color>-->
+    <color name="colorPrimaryLight">#000000</color>
+    <!--    <color name="colorPrimaryDark">#F47A2E</color>-->
+    <color name="colorPrimaryDark">#159CD7</color>
+    <!--    <color name="colorAccent">#F58634</color>-->
+    <color name="colorAccent">#159CD7</color>
+    <color name="colorSecondary">#00ccff</color>
+
+    // New UX Colors
+    <color name="colorNewUxBlue">#159CD7</color>
+    <color name="colorNewUxDarkGray">#666666</color>
+    <color name="colorNewUxLightGray">#C5C5C5</color>
+    <color name="colorNewUxOrange">#F47A2E</color>
+
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#96ffffff</color>
+    <color name="colorDarkGrey">#96f9f9f9</color>
+    <color name="colorDarkGrey1">#A9A9A9</color>
+    <color name="colorError">#EF5350</color>
+    <color name="error_color">#EF5350</color>
+    <color name="colorErrorDark">#C64C4A</color>
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="success_color">#4CAF50</color>
+    <color name="colorAccepted">#ce1440f4</color>
+
+    <color name="colorBlue">#33b5f1</color>
+    <color name="colorYellow">#f1e833</color>
+    <color name="colorYellowGolden">#d4edba40</color>
+    <color name="colorYellowGoldenLight">#D4E6C77C</color>
+
+    <color name="colorLightGrey">#FFFFFFFF</color>
+    <color name="colorLightAccent">#cefa7d21</color>
+    <color name="colorDarkOrange">#f57210</color>
+    <color name="colorLightOrange">#FF9800</color>
+
+    <color name="colorBorder">#66847c7c</color>
+    <color name="colorBgLog">#FBFBFB</color>
+
+    <color name="colorVeniceBlue">#08588B</color>
+    <color name="colorJaffa">#F58634</color>
+    <color name="colorCerulean1">#00B0DC</color>
+    <color name="colorCerulean">#00CCFF</color>
+
+    <color name="colorDarkGrayBorder">#bfbebe</color>
+    <color name="colorMoreDarkGrayBorder">#838080</color>
+    <color name="colorDarkGray">#E0E0E0</color>
+    <color name="colorMoon">#E0E0E0</color>
+    <color name="colorMoonLight">#ECECEC</color>
+    <color name="colorSecondaryText">#616161</color>
+
+    // Colors for new Design
+    <color name="colorAccentLatest">#F47A2E</color>
+    <color name="colorSwitchNotChecked">#C6CBDC</color>
+    <color name="colorUnAllowButton">#E5E5EA</color>
+    <color name="colorLightDarkBottomSheet">#F7F7F7</color>
+
+    <color name="material_button_ripple_color">#33AAAAAA</color>
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+</resources>
